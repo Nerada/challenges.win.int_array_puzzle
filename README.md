@@ -1,4 +1,4 @@
-# Integer Array Puzzle
+# Integer Array Puzzle [![Build Status](https://dev.azure.com/nerada/GitHub/_apis/build/status/Nerada.challenges_intArrayPuzzle?branchName=master)](https://dev.azure.com/nerada/GitHub/_build/latest?definitionId=9&branchName=master)
 
 (Airtame_001) Submit your solution by committing them into this git repository.
 
