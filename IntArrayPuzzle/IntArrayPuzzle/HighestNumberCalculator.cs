@@ -23,15 +23,19 @@ namespace IntArrayPuzzle
         public int Calculate(List<int> numberArray)
         {
             // Cannot use empty list
-            if (numberArray == null) { throw new ArgumentException("Parameter cannot be null"); }
+            if (numberArray == null)
+            {
+                throw new ArgumentException("Parameter cannot be null");
+            }
 
-            // Cannot use empty list
-            if (numberArray.Count == 0) { throw new ArgumentException("Parameter contains no elements"); }
-
-            // Directly return value of single element
-            if (numberArray.Count == 1) { return numberArray[0]; }
-
-            return CalculateImpl(numberArray);
+            return numberArray.Count switch
+            {
+                // Cannot use empty list
+                0 => throw new ArgumentException("Parameter contains no elements"),
+                // Directly return value of single element
+                1 => numberArray[0],
+                _ => CalculateImpl(numberArray)
+            };
         }
 
         /// <summary>
@@ -49,10 +53,10 @@ namespace IntArrayPuzzle
             // The number 1 should never be multiplied under these conditions
             returnValue += numberArray.Count(i => i == 1);
 
-            var higherThanOneList = numberArray.Where(i => i > 1).ToList();
+            List<int> higherThanOneList = numberArray.Where(i => i > 1).ToList();
             higherThanOneList.Reverse(); // Start with the highest numbers
 
-            var smallerThanOneList = numberArray.Where(i => i < 1).ToList();
+            List<int> smallerThanOneList = numberArray.Where(i => i < 1).ToList();
 
             returnValue += ListResult(higherThanOneList);
             returnValue += ListResult(smallerThanOneList);
@@ -67,9 +71,13 @@ namespace IntArrayPuzzle
         /// <returns>Result of partial array</returns>
         private int ListResult(List<int> partialArray)
         {
-            if (partialArray.Count == 0) { return 0; }
-
-            if (partialArray.Count == 1) { return partialArray[0]; }
+            switch (partialArray.Count)
+            {
+                case 0:
+                    return 0;
+                case 1:
+                    return partialArray[0];
+            }
 
             var totalResult = 0;
 
@@ -80,7 +88,10 @@ namespace IntArrayPuzzle
                 partialArray.RemoveAt(partialArray.Count - 1);
             }
 
-            for (var i = 0; i < partialArray.Count; i += 2) { totalResult += partialArray[i] * partialArray[i + 1]; }
+            for (var i = 0; i < partialArray.Count; i += 2)
+            {
+                totalResult += partialArray[i] * partialArray[i + 1];
+            }
 
             return totalResult;
         }
