@@ -1,4 +1,4 @@
-# Airtame Technical Challenge
+# Integer Array Puzzle
 
 (Airtame_001) Submit your solution by committing them into this git repository.
 
