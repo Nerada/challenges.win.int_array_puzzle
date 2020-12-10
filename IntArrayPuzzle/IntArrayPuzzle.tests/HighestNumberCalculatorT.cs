@@ -1,6 +1,6 @@
 // -----------------------------------------------
 //     Author: Ramon Bollen
-//       File: Challenge1.tests.HighestNumberCalculatorT.cs
+//       File: IntArrayPuzzle.tests.HighestNumberCalculatorT.cs
 // Created on: 20200215
 // -----------------------------------------------
 
@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Challenge1.tests
+namespace IntArrayPuzzle.tests
 {
     /// <summary>
     ///     Test class for the HighestNumberCalculator

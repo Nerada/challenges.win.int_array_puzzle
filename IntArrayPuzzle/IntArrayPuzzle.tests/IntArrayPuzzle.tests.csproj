@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Ramon Bollen</Authors>
+    <Company>RamBo</Company>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -13,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Challenge1\Challenge1.csproj" />
+    <ProjectReference Include="..\IntArrayPuzzle\IntArrayPuzzle.csproj" />
   </ItemGroup>
 
 </Project>

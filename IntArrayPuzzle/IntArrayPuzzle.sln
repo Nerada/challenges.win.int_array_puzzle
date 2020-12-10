@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge1", "Challenge1\Challenge1.csproj", "{A9EE26DC-9B4A-478B-AFD0-F51BE9B3B97A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntArrayPuzzle", "IntArrayPuzzle\IntArrayPuzzle.csproj", "{A9EE26DC-9B4A-478B-AFD0-F51BE9B3B97A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge1.tests", "Challenge1.tests\Challenge1.tests.csproj", "{E7D1270A-020A-461A-A83D-DBFB069FB067}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntArrayPuzzle.tests", "IntArrayPuzzle.tests\IntArrayPuzzle.tests.csproj", "{E7D1270A-020A-461A-A83D-DBFB069FB067}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

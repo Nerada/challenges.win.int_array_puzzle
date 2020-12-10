@@ -1,13 +1,13 @@
 ﻿// -----------------------------------------------
 //     Author: Ramon Bollen
-//       File: Challenge1.Program.cs
+//       File: IntArrayPuzzle.Program.cs
 // Created on: 20200215
 // -----------------------------------------------
 
 using System;
 using System.Collections.Generic;
 
-namespace Challenge1
+namespace IntArrayPuzzle
 {
     internal static class Program
     {

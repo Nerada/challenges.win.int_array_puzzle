@@ -1,6 +1,6 @@
 ﻿// -----------------------------------------------
 //     Author: Ramon Bollen
-//       File: Challenge1.HighestNumberCalculator.cs
+//       File: IntArrayPuzzle.HighestNumberCalculator.cs
 // Created on: 20190927
 // -----------------------------------------------
 
@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Challenge1
+namespace IntArrayPuzzle
 {
     /// <summary>
     ///     Output the highest possible number based on pairing and multiplying pairs
