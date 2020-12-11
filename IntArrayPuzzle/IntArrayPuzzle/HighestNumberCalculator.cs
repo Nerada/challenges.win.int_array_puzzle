@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------
 //     Author: Ramon Bollen
-//       File: IntArrayPuzzle.HighestNumberCalculator.cs
-// Created on: 20190927
+//      File: IntArrayPuzzle.HighestNumberCalculator.cs
+// Created on: 20201211
 // -----------------------------------------------
 
 using System;

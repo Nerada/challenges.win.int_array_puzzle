@@ -1,7 +1,7 @@
 ﻿// -----------------------------------------------
 //     Author: Ramon Bollen
-//       File: IntArrayPuzzle.Program.cs
-// Created on: 20200215
+//      File: IntArrayPuzzle.Program.cs
+// Created on: 20201211
 // -----------------------------------------------
 
 using System;
