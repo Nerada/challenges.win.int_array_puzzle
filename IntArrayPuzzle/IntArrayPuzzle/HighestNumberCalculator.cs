@@ -45,7 +45,7 @@ namespace IntArrayPuzzle
         /// <returns>Total result of calculation</returns>
         private int CalculateImpl(List<int> numberArray)
         {
-            var returnValue = 0;
+            int returnValue = 0;
 
             // Assumption: List is allowed to be ordered
             numberArray.Sort();
@@ -79,7 +79,7 @@ namespace IntArrayPuzzle
                     return partialArray[0];
             }
 
-            var totalResult = 0;
+            int totalResult = 0;
 
             // Amount of values is odd, last value will be added and not multiplied
             if (partialArray.Count % 2 != 0)
@@ -88,7 +88,7 @@ namespace IntArrayPuzzle
                 partialArray.RemoveAt(partialArray.Count - 1);
             }
 
-            for (var i = 0; i < partialArray.Count; i += 2)
+            for (int i = 0; i < partialArray.Count; i += 2)
             {
                 totalResult += partialArray[i] * partialArray[i + 1];
             }
