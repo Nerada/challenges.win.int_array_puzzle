@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace IntArrayPuzzle.tests
@@ -19,16 +20,16 @@ namespace IntArrayPuzzle.tests
         private readonly HighestNumberCalculator _calculator = new();
 
         [TestMethod]
-        public void Example_1_test() => Assert.AreEqual(27, _calculator.Calculate(new List<int> {0, 1, 2, 3, 4, 5}));
+        public void Example_1_test() => _calculator.Calculate(new List<int> {0, 1, 2, 3, 4, 5}).Should().Be(27);
 
         [TestMethod]
-        public void Example_2_test() => Assert.AreEqual(1, _calculator.Calculate(new List<int> {-1, 0, 1}));
+        public void Example_2_test() => _calculator.Calculate(new List<int> {-1, 0, 1}).Should().Be(1);
 
         [TestMethod]
-        public void Example_3_test() => Assert.AreEqual(2, _calculator.Calculate(new List<int> {1, 1}));
+        public void Example_3_test() => _calculator.Calculate(new List<int> {1, 1}).Should().Be(2);
 
         [TestMethod]
-        public void SingleValue_test() => Assert.AreEqual(42, _calculator.Calculate(new List<int> {42}));
+        public void SingleValue_test() => _calculator.Calculate(new List<int> {42}).Should().Be(42);
 
         [TestMethod]
         public void Unsorted_test() =>
@@ -38,25 +39,23 @@ namespace IntArrayPuzzle.tests
             }));
 
         [TestMethod]
-        public void Multiple_zeros_test() =>
-            Assert.AreEqual(84, _calculator.Calculate(new List<int>
-            {
-                -42, -1, 0, 0, 0, 42
-            }));
+        public void Multiple_zeros_test() => _calculator.Calculate(new List<int> {-42, -1, 0, 0, 0, 42}).Should().Be(84);
 
         [TestMethod]
-        public void Only_negative_numbers_test() =>
-            Assert.AreEqual(83, _calculator.Calculate(new List<int>
-            {
-                -42, -1, -2
-            }));
+        public void Only_negative_numbers_test() => _calculator.Calculate(new List<int> {-42, -1, -2}).Should().Be(83);
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException), "Parameter cannot be null")]
-        public void Null_input_test() => _calculator.Calculate(null);
+        public void Null_input_test()
+        {
+            Action action = () => _calculator.Calculate(null);
+            action.Should().Throw<ArgumentException>().WithMessage("Parameter cannot be null");
+        }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException), "Parameter contains no elements")]
-        public void Empty_list_test() => Assert.AreEqual(83, _calculator.Calculate(new List<int>()));
+        public void Empty_list_test()
+        {
+            Action action = () => _calculator.Calculate(new List<int>());
+            action.Should().Throw<ArgumentException>().WithMessage("Parameter contains no elements");
+        }
     }
 }
