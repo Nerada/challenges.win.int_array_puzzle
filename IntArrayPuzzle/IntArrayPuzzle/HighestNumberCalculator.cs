@@ -66,7 +66,7 @@ public class HighestNumberCalculator
     /// </summary>
     /// <param name="partialArray"></param>
     /// <returns>Result of partial array</returns>
-    private int ListResult(List<int> partialArray)
+    private int ListResult(IList<int> partialArray)
     {
         switch (partialArray.Count)
         {
